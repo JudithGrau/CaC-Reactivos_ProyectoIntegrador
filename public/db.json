@@ -1,0 +1,66 @@
+[
+    {
+        "id": "01",
+        "nombre": "Café Brasil Bourbon",
+        "descripcion": "Café Brasil Bourbon",
+        "marca": "Premium",
+        "imagen": "https://www.modobarista.com/product_images/c/319/Bourbon__53059_thumb.png",
+        "precio": " 2401"
+    },
+    {
+        "id": "02",
+        "nombre": "Café Costa Rica",
+        "descripcion": "Hamburguesa casera con panceta crocante",
+        "marca": "Premium",
+        "imagen": "https://www.modobarista.com/product_images/d/183/Costa_Rica__47340_thumb.png",
+        "precio": " 2558"
+    },
+    {
+        "id": "03",
+        "nombre": "Café Blend Brasil Colombia",
+        "descripcion": "Hamburguesa casera con tomate, lechuga queso y panceta",
+        "marca": "Premium",
+        "imagen": "https://www.modobarista.com/product_images/x/864/House_Blend__21246_thumb.png",
+        "precio": " 2496"
+    },
+    {
+        "id": "04",
+        "nombre": "Café Colombia",
+        "descripcion": "Hamburguesa casera con Hongos grillados",
+        "marca": "Premium",
+        "imagen": "https://www.modobarista.com/product_images/r/641/Colombia__23762_thumb.png",
+        "precio": " 2496"
+    },
+    {
+        "id": "05",
+        "nombre": "Café Etiopía",
+        "descripcion": "Hamburguesa casera con panceta crocante",
+        "marca": "Premium",
+        "imagen": "https://www.modobarista.com/product_images/z/984/Etiopia__61689_thumb.png",
+        "precio": " 2191"
+    },
+    {
+        "id": "06",
+        "nombre": "Café Brasil Catuai",
+        "descripcion": "Hamburguesa casera con panceta crocante",
+        "marca": "Premium",
+        "imagen": "https://www.modobarista.com/product_images/l/035/Catuai__85152_thumb.png",
+        "precio": " 2191"
+    },
+    {
+        "id": "07",
+        "nombre": "Café Blend Mundial",
+        "descripcion": "Hamburguesa casera con panceta crocante",
+        "marca": "Premium",
+        "imagen": "https://www.modobarista.com/product_images/s/488/mundial__41468_thumb.png",
+        "precio": " 2656"
+    },
+    {
+        "id": "08",
+        "nombre": "Café Honduras",
+        "descripcion": "Hamburguesa casera con panceta crocante",
+        "marca": "Premium",
+        "imagen": "https://www.modobarista.com/product_images/w/057/Honduras__90556_thumb.png",
+        "precio": " 2191"
+    }
+]

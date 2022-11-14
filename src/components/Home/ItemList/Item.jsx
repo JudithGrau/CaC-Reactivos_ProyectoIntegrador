@@ -1,3 +1,5 @@
+import '../../Styles/ItemList.css' 
+
 export const Item = ({ item }) => {
 
     const { nombre, imagen, precio } = item
@@ -11,7 +13,8 @@ export const Item = ({ item }) => {
                         alt={imagen} />
                     <div className="card-body">
                         <h5 className="card-title initialism link-secondary">{nombre}</h5>
-                        <p className="card-text">${precio}</p>
+                        
+                        <p className="card-text link-secondary">ARS ${precio}</p>
                     </div>
                 </div>
             </div>

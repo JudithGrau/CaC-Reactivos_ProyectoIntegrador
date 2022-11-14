@@ -8,7 +8,7 @@ export const ItemListContainer = () => {
 
     return (
         loading
-            ? <img src={ gif } alt={ gif } />
+            ? <div className="spinner-border text-info" role='status' />
             : <ItemList datos={ datos } />
     )
 }

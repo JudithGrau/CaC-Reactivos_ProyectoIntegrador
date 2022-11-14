@@ -1,26 +1,30 @@
 import { Link } from "react-router-dom"
-import { Carousel } from "../Carousel/Carousel"
+import { CarouselBanner } from "../Carousel/Carousel"
 import { Item } from "./"
+import '../../Styles/ItemList.css' 
+
 
 export const ItemList = ({ datos }) => {
 
-    const containerCss = "container align-items- row row-cols-1 row-cols-lg-4 row-cols-md-3 g-3"
+    const containerCss = "container"
 
     return (
         <>
-            <Carousel />
+            <CarouselBanner />
             <div
                 className={containerCss}
-                style={{ marginTop: '7em' }}
+                style={{ marginTop: '4em' }}
             >
                 {datos.map(item => <Link
                     key={item.id}
                     to={`/item/${item.id}`}
-                    className='text-decoration-none'
+                    className='text-decoration-none item'
                 >
                     <Item item={item} />
                 </Link>)}
             </div>
+
+           
         </>
     )
 }

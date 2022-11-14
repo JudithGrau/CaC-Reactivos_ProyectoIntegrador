@@ -1,29 +1,35 @@
-import carousel_1 from '../../../assets/img/carousel1.jpg'
-import carousel_2 from '../../../assets/img/carousel2.png'
-import carousel_3 from '../../../assets/img/carousel3.png'
+import Carousel from 'react-bootstrap/Carousel';
+import carousel1 from '../../../assets/img/carousel1.png'
+import carousel2 from '../../../assets/img/carousel2.png'
+import carousel3 from '../../../assets/img/carousel3.png'
+import '../../Styles/Carousel.css' 
 
-export const Carousel = () => {
+export const CarouselBanner = () => {
     return(
-        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <Carousel>
+            <Carousel.Item>
+                <img
+                className="d-block carousel-img"
+                src={carousel1}
+                alt="Imagen 1"
+                />
+            </Carousel.Item>
 
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                <img src={carousel_1} alt="" class="d-block"/>
-                </div>
-                <div class="carousel-item">
-                <img src={carousel_2} alt="" class="d-block"/>
-                </div>
-                <div class="carousel-item">
-                <img src={carousel_3} alt="" class="d-block"/>
-                </div>
-            </div>
+            <Carousel.Item>
+                <img
+                className="d-block carousel-img"
+                src={carousel2}
+                alt="Imagen 2"
+                />
+            </Carousel.Item>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
+            <Carousel.Item>
+                <img
+                className="d-block carousel-img"
+                src={carousel3}
+                alt="Imagen 3"
+                />
+            </Carousel.Item>
+        </Carousel>
     )
 }

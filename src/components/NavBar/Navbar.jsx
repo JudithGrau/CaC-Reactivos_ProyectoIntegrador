@@ -6,7 +6,7 @@ export const Navbar = () => {
 
     const { cartCount } = useContext(CartContext)
     const [active, setActive] = useState(window.location.pathname)
-    const opciones = ['Inicio', 'Perfil', 'Contacto']
+    const opciones = ['Inicio', 'Nosotros', 'Contacto']
 
     function activeLink(opcion) {
         const rutaActual = `/${opcion.toLowerCase()}`

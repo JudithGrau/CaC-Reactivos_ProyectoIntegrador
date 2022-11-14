@@ -1,5 +1,5 @@
 export const MainLayout = ({ children }) =>{
     return (
-        <div>{ children }</div>
-    )
+      <div className=''>{children}</div>
+    );
 }

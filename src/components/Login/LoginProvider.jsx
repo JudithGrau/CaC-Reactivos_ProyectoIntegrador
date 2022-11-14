@@ -1,5 +1,5 @@
 export const LoginProvider = ({ children }) =>{
     return (
-        <div>{ children }</div>
+        <div className="">{ children }</div>
     )
 }

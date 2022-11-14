@@ -11,7 +11,8 @@ export const CartProvider = ({ children }) => {
         if (value > 0) {
             setCartCount(cartCount + value)
             setItems([...items,
-            { ...item, cantidad: value }])
+                { ...item, cantidad: value }])
+            
         }
     }
 
@@ -19,9 +20,9 @@ export const CartProvider = ({ children }) => {
         <CartContext.Provider value={ {
             addProducts,
             cartCount,
-            items
+            items,
         } }>
-            { children }
+            {children}
         </CartContext.Provider>
     )
 }

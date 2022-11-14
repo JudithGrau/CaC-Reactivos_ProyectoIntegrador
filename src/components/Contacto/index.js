@@ -1,1 +1,1 @@
-export * from './Contacto'
+export * from './Mayorista'

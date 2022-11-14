@@ -23,7 +23,8 @@ export const Navbar = () => {
     }
 
     return (
-        <><nav className="navbar navbar-expand-lg bg-success w-auto">
+        <>
+        <nav className="navbar navbar-expand-lg bg-success w-auto">
             <div className="container-fluid">
                 <Link className="navbar-brand text-light" to="/">
                     <Logo className="img-fluid" />
@@ -36,7 +37,7 @@ export const Navbar = () => {
                         {cartCount > 0 && <Link
                             to='carrito'
                             className="cart">
-                            <i class="bi bi-cart3"></i>
+                            <i className="bi bi-cart3"></i>
                             <span className="cont">{cartCount}</span>
                         </Link>}
 

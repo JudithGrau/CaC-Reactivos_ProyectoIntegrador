@@ -21,7 +21,7 @@ export const ItemDetail = ({ item }) => {
                             <br />
 
                             <h6>Id del producto:</h6>
-                            <small>{ id.substring(0, 25) }...</small>
+                            <small>{ id.substring(0, 25) }</small>
                             <br /><br />
 
                             <h4>Precio:</h4>

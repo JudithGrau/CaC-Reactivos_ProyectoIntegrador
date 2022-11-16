@@ -10,7 +10,7 @@ export const MainMenu = () => {
 
     const { cartCount } = useContext(CartContext)
     const [active, setActive] = useState(window.location.pathname)
-    const opciones = ['Inicio', 'Nosotros', 'Contacto']
+    const opciones = ['Inicio', 'Nosotros', 'Contacto','Register', 'Login']
 
     function activeLink(opcion) {
         const rutaActual = `/${opcion.toLowerCase()}`

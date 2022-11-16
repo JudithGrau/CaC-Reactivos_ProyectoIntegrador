@@ -9,10 +9,16 @@ export const Navbar = () => {
   const [active, setActive] = useState(window.location.pathname);
   const opciones = ['Inicio', 'Nosotros', 'Contacto', 'Register', 'Login'];
 
+<<<<<<< HEAD
   function activeLink(opcion) {
     const rutaActual = `/${opcion.toLowerCase()}`;
     return active === rutaActual ? 'fw-bold' : null;
   }
+=======
+    const { cartCount } = useContext(CartContext)
+    const [active, setActive] = useState(window.location.pathname)
+    const opciones = ['Inicio', 'Nosotros', 'Contacto']
+>>>>>>> 88597486128ad7800867f1356889c2644cdd6897
 
   function handleClick(opcion) {
     const rutaActual = `/${opcion.toLowerCase()}`;

@@ -1,5 +1,6 @@
 import { useContext, useState } from "react"
 import { CartContext } from "./CartContex";
+import '../Styles/CartBox.css' 
 
 export const CartBox = ({ item }) => {
 
@@ -19,51 +20,64 @@ export const CartBox = ({ item }) => {
     }
 
     return (
-        <div className="container">
-            <div className="row gap-2">
-
-                {/* Restar */ }
-                <div className="col-1 align-end">
-                    <button
-                        className="btn btn-outline-danger"
-                        onClick={ remove }>
-                        -1
-                    </button>
-                </div>
-
-                <div className="col">
+        <>
+            <div className="contentCartBox">
+                <div className="cantidad">
                     <h5 className="text-center">
-                        Cantidad: { count } unidad/es
+                        Cantidad: { count } Unidad/es
                     </h5>
                 </div>
+                
+                <div className="botonesSumaResta">
 
-                {/* Sumar */ }
-                <div className="col-1 align-end">
-                    <button
-                        className="btn btn-outline-primary"
-                        onClick={ add }>
-                        +1
-                    </button>
+                    {/* Restar */ }
+                    <div className="resta">
+                        <button
+                            className="btn btn-danger"
+                            onClick={ remove }>
+                            <i className="bi bi-dash-lg"></i>
+                        </button>
+                    </div>
+
+                    {/* Restart */ }
+                    <div className="restart">
+                        <button
+                            className="btn btn-secondary"
+                            onClick={ reset }
+                        >
+                            <i className="bi bi-arrow-clockwise"></i>
+                        </button>
+                    </div>
+
+                    {/* Sumar */ }
+                    <div className="suma">
+                        <button
+                            className="btn btn-primary"
+                            onClick={ add }>
+                            <i className="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
                 </div>
-
             </div>
 
             <hr />
 
-            <div className="row gap-2">
+            <div className="contentCartBuyButtons">
                 <button
                     className="btn btn-secondary"
                     onClick={ () => addProducts(count, item) }
                 >
+                    <i className="bi bi-cart-plus"></i>
                     Agregar al carrito
                 </button>
+                
                 <button
                     className="btn btn-secondary"
-                    onClick={ reset }
                 >
-                    Reestablecer
+                    <i className="bi bi-cart-check"></i>
+                    Comprar
                 </button>
             </div>
-        </div>
+        </>
     )
 }

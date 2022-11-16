@@ -1,0 +1,28 @@
+.container .card{
+    width: 100%;
+}
+
+.card .producto img{
+    width: 60px;
+}
+
+.card .fila{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card .fila .producto{
+    width: 20%;
+}
+
+.card .fila div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecera .tucarrito{
+    text-align: center;
+}
+

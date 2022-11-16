@@ -12,7 +12,6 @@ export const CartProvider = ({ children }) => {
             setCartCount(cartCount + value)
             setItems([...items,
                 { ...item, cantidad: value }])
-            
         }
     }
 

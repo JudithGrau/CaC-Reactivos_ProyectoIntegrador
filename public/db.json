@@ -7,7 +7,6 @@
         "altura": "1200",
         "proceso": "Natural",
         "varietal": "Bourbon Rojo",
-        "marca": "Premium",
         "imagen": "https://www.modobarista.com/product_images/c/319/Bourbon__53059_thumb.png",
         "precio": " 2401"
     },
@@ -19,7 +18,6 @@
       "altura": "1350",
       "proceso": "Red Honey",
       "varietal": "Caturra - Catuai",
-      "marca": "Premium",
       "imagen": "https://www.modobarista.com/product_images/d/183/Costa_Rica__47340_thumb.png",
       "precio": " 2558"
     },
@@ -31,7 +29,6 @@
       "altura": "1500",
       "proceso": "Lavado y Natural",
       "varietal": "Topazio Castilla Caturra Typica y Maragogipe",
-      "marca": "Premium",
       "imagen": "https://www.modobarista.com/product_images/x/864/House_Blend__21246_thumb.png",
       "precio": " 2496"
     },
@@ -43,7 +40,6 @@
       "altura": "1600-1800",
       "proceso": "Lavado",
       "varietal": "Castilla Caturra Typica y Maragogipe",
-      "marca": "Premium",
       "imagen": "https://www.modobarista.com/product_images/r/641/Colombia__23762_thumb.png",
       "precio": " 2496"
     },
@@ -55,7 +51,6 @@
       "altura": "2000",
       "proceso": "Natural",
       "varietal": "Tipica",
-      "marca": "Premium",
       "imagen": "https://www.modobarista.com/product_images/z/984/Etiopia__61689_thumb.png",
       "precio": " 2191"
     },
@@ -67,7 +62,6 @@
       "altura": "1200",
       "proceso": "Natural",
       "varietal": "Catuai",
-      "marca": "Premium",
       "imagen": "https://www.modobarista.com/product_images/l/035/Catuai__85152_thumb.png",
       "precio": " 2191"
     },
@@ -79,7 +73,6 @@
       "altura": "Varias",
       "proceso": "Lavado/ Red Honey",
       "varietal": "Varias",
-      "marca": "Premium",
       "imagen": "https://www.modobarista.com/product_images/s/488/mundial__41468_thumb.png",
       "precio": " 2656"
     },
@@ -91,7 +84,6 @@
       "altura": "1500",
       "proceso": "Lavado",
       "varietal": "Tipica",
-      "marca": "Premium",
       "imagen": "https://www.modobarista.com/product_images/w/057/Honduras__90556_thumb.png",
       "precio": " 2191"
     }

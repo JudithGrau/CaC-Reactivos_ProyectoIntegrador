@@ -25,7 +25,7 @@ export const ItemList = ({ datos }) => {
           >
             <Item item={item} />
           </Link>
-        )}
+        ))}
       </div>
     </>
   );

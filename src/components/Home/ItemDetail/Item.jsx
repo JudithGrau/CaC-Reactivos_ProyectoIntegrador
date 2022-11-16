@@ -1,12 +1,12 @@
 export const Item = () => {
 
-    const weight = ['250', '500', '750', '1000', '2000']
+    const weight = ['250gr', '500gr', '1000gr']
 
     return (
         <div className="container text-center">
             { weight.map(wgt => <button
                 key={ wgt }
-                className='col-1 mx-2 px-2 btn btn-secondary'
+                className='col-2 mx-2 px-2 btn btn-secondary'
             >{ wgt }</button>) }
         </div>
     )

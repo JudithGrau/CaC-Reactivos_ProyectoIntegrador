@@ -3,8 +3,6 @@ import { useFetch } from '../../../hooks';
 import { ItemList } from './';
 
 export const ItemListContainer = () => {
-  const { datos, loading } = useFetch();
-
 
     const { datos, loading } = useFetch()
 

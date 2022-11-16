@@ -63,7 +63,7 @@ export const Navbar = () => {
                 >
                   {opcion}
                 </Link>
-              )}
+              ))}
             </div>
           </div>
         </div>

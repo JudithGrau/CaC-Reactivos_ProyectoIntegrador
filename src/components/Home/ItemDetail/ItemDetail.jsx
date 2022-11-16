@@ -53,13 +53,7 @@ export const ItemDetail = ({ item }) => {
               <small>{id.substring(0, 25)}</small>
               <br />
               <br />
-
-
-                            <h6>Id del producto:</h6>
-                            <small>{ id.substring(0, 25) }</small>
-                            <br /><br />
-
-
+                            
               <Item />
               <hr />
               <CartBox item={item} />

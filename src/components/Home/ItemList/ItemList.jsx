@@ -1,10 +1,14 @@
-import { Link } from 'react-router-dom';
-import { CarouselBanner } from '../Carousel/Carousel';
-import { Item } from './';
-import '../../Styles/ItemList.css';
+
+import { Link } from "react-router-dom"
+import { CarouselBanner } from "../Carousel/Carousel"
+import { Item } from "./"
+import '../../Styles/ItemList.css' 
+
+
 
 export const ItemList = ({ datos }) => {
   const containerCss = 'container';
+
 
   return (
     <>
@@ -21,8 +25,9 @@ export const ItemList = ({ datos }) => {
           >
             <Item item={item} />
           </Link>
-        ))}
+        )}
       </div>
     </>
   );
 };
+

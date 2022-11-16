@@ -1,4 +1,6 @@
-import '../../Styles/ItemList.css';
+
+import '../../Styles/ItemList.css' 
+
 
 export const Item = ({ item }) => {
   const { nombre, imagen, precio } = item;
@@ -11,6 +13,7 @@ export const Item = ({ item }) => {
           <div className='card-body'>
             <h5 className='card-title initialism link-secondary'>{nombre}</h5>
 
+
             <p className='card-text link-secondary'>ARS ${precio}</p>
           </div>
         </div>
@@ -18,3 +21,22 @@ export const Item = ({ item }) => {
     </>
   );
 };
+
+    return (
+        <>
+            <div className="col">
+                <div className="card">
+                    <img src={imagen}
+                        className="card-img-top"
+                        alt={imagen} />
+                    <div className="card-body">
+                        <h5 className="card-title initialism link-secondary">{nombre}</h5>
+                        
+                        <p className="card-text link-secondary">ARS ${precio}</p>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+

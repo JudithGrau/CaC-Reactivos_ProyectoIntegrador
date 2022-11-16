@@ -5,9 +5,13 @@ import { ItemList } from './';
 export const ItemListContainer = () => {
   const { datos, loading } = useFetch();
 
-  return loading ? (
-    <div className='spinner-border text-info' role='status' />
-  ) : (
-    <ItemList datos={datos} />
-  );
-};
+
+    const { datos, loading } = useFetch()
+
+    return (
+        loading
+            ? <div className="spinner-border text-info" role='status' />
+            : <ItemList datos={ datos } />
+    )
+}
+

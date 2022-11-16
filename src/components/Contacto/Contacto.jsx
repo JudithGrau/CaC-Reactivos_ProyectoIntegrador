@@ -3,11 +3,7 @@ import { useState } from 'react';
 const initialState = {
   nombre: '',
   email: '',
-<<<<<<< HEAD
   texto: '',
-=======
-  texto: ''
->>>>>>> 683e021e6010a33920cf623fed9037fa02fcd2c6
 };
 
 export const Contacto = () => {

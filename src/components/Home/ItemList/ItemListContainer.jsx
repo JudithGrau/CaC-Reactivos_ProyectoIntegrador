@@ -1,6 +1,6 @@
-import gif from './../../../assets/animations/cargando.gif'
-import { useFetch } from "../../../hooks"
-import { ItemList } from "./"
+import gif from './../../../assets/animations/cargando.gif';
+import { useFetch } from '../../../hooks';
+import { ItemList } from './';
 
 export const ItemListContainer = () => {
 
@@ -12,3 +12,4 @@ export const ItemListContainer = () => {
             : <ItemList datos={ datos } />
     )
 }
+

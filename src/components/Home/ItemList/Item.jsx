@@ -1,8 +1,10 @@
+
 import '../../Styles/ItemList.css' 
 
-export const Item = ({ item }) => {
 
-    const { nombre, imagen, precio } = item
+export const Item = ({ item }) => {
+  const { nombre, imagen, precio } = item;
+
 
     return (
         <>
@@ -21,3 +23,4 @@ export const Item = ({ item }) => {
         </>
     )
 }
+

@@ -23,8 +23,40 @@ export const ItemDetail = ({ item }) => {
           </div>
           <div className='item'>
             <div className='text-start'>
+<<<<<<< HEAD
               <h2>{nombre}</h2>
               <span className='fw-bold'>Precio: </span> ARS$ {precio}
+=======
+              <h4>Descripción del producto:</h4>
+              <p style={{ textAlign: 'justify' }}>
+                <span className='fw-bold'>Origen: </span>
+                {origen}
+              </p>
+              <p style={{ textAlign: 'justify' }}>
+                <span className='fw-bold'>Finca: </span>
+                {finca}
+              </p>
+              <p style={{ textAlign: 'justify' }}>
+                <span className='fw-bold'>Altura: </span>
+                {altura}
+              </p>
+              <p style={{ textAlign: 'justify' }}>
+                <span className='fw-bold'>Proceso: </span>
+                {proceso}
+              </p>
+              <p style={{ textAlign: 'justify' }}>
+                <span className='fw-bold'>Varietal: </span>
+                {varietal}
+              </p>
+              <br />
+
+              <h6>Id del producto:</h6>
+              <small>{id.substring(0, 25)}</small>
+              <br />
+              <br />
+                            
+              <Item />
+>>>>>>> 683e021e6010a33920cf623fed9037fa02fcd2c6
               <hr />
               <CartBox item={item} />
               <hr />

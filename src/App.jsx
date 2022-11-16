@@ -1,7 +1,7 @@
 
 import { CartProvider } from './components/Cart'
 import { MainLayout } from './components/layouts'
-import { Navbar } from './components/NavBar'
+import { MainMenu } from './components/NavBar'
 import { Router } from './components/router'
 import { Footer } from './components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -16,7 +16,7 @@ function App() {
     <div className="App">
 
         <CartProvider>
-          <Navbar />
+          <MainMenu />
           
           <MainLayout>
             <Router />

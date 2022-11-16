@@ -1,0 +1,25 @@
+.contentCartBox{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.botonesSumaResta{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.botonesSumaResta button{
+    width: 40px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.contentCartBuyButtons{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

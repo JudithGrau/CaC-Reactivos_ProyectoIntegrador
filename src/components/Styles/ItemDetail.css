@@ -1,0 +1,12 @@
+.detail{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    font-size: smaller;
+    flex-wrap: wrap;
+}

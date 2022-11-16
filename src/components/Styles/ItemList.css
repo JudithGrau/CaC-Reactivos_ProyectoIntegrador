@@ -9,11 +9,6 @@
     margin-bottom: 20px;
 }
 
-.card{
+.card .card-img-top{
     width: 250px;
-}
-
-.card img{
-    width: 180px;
-    align-self: center;
 }

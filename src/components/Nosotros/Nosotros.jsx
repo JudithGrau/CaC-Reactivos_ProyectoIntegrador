@@ -2,7 +2,11 @@ export const Nosotros = () => {
   return (
     <section className='container d-flex justify-content-center align-items-center pt-5'>
       <div className='d-flex flex-column m-5'>
+<<<<<<< HEAD
+        <h2 className='p-3'>Nosotros</h2>
+=======
         <h2 className="p-3">Nosotros</h2>
+>>>>>>> 88597486128ad7800867f1356889c2644cdd6897
         <p className='text-start'>
           Atraídos por el particular aroma e inconfundible sabor del café
           descubrimos en él un mundo nuevo y maravilloso para nosotros. Así fue

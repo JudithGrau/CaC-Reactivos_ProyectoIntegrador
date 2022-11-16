@@ -3,9 +3,13 @@ import { useState } from 'react';
 const initialState = {
   nombre: '',
   email: '',
+<<<<<<< HEAD
+  texto: ''
+=======
   texto: '',
   nombre_empresa: '',
   numero_orden: '',
+>>>>>>> 88597486128ad7800867f1356889c2644cdd6897
 };
 
 export const Contacto = () => {

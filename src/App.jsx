@@ -1,3 +1,4 @@
+
 import { CartProvider } from './components/Cart'
 import { MainLayout } from './components/layouts'
 import { Navbar } from './components/NavBar'
@@ -8,9 +9,10 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import './App.css'
 
 
-function App() {
 
+function App() {
   return (
+
     <div className="App">
 
         <CartProvider>
@@ -23,8 +25,9 @@ function App() {
            <Footer/>
         </CartProvider>
 
+
     </div>
   );
 }
 
-export default App
+export default App;

@@ -1,10 +1,52 @@
-import { useContext } from "react"
-import { CartContext } from "./CartContex"
+import { useContext } from 'react';
+import { CartContext } from './CartContex';
 
 export const Cart = () => {
+  const { items } = useContext(CartContext);
 
-    const { items } = useContext(CartContext)
+  if (items.length > 0) {
+    return (
+      <div className='container'>
+        <h1 className='mb-4'>Carrito:</h1>
 
+<<<<<<< HEAD
+        {items.map(
+          ({
+            id,
+            nombre,
+            marca,
+            imagen,
+            precio,
+            origen,
+            finca,
+            altura,
+            proceso,
+            varietal,
+            cantidad,
+          }) => (
+            <div className='card mb-3' key={id}>
+              <div className='row g-0'>
+                <div className='col-5 col-sm-4'>
+                  <img src={imagen} className='img-fluid w-50' alt={id} />
+                </div>
+                <div className='col-7 col-sm-8'>
+                  <div className='card-body'>
+                    <h5 className='card-title'>{nombre}</h5>
+                    <h6 className='card-text'>{marca}</h6>
+                    <p className='card-text'> {origen}</p>
+                    <p className='card-text'> {finca}</p>
+                    <p className='card-text'> {altura}</p>
+                    <p className='card-text'> {proceso}</p>
+                    <p className='card-text'> {varietal}</p>
+                    <p className='card-text'>
+                      <small className='text-muted'>
+                        ${precio} - cantidad: {cantidad}
+                      </small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+=======
     if (items.length > 0) {
         return (
             <div className="container">
@@ -34,11 +76,16 @@ export const Cart = () => {
                     </div>)
                 }
                 <button className="shadow fw-bold fs-5 w-100 btn btn-warning">Ir al checkout</button>
+>>>>>>> 88597486128ad7800867f1356889c2644cdd6897
             </div>
-        )
-    }
-
-    else {
-        return (<h2>No tenes productos en tu carrito</h2>)
-    }
-}
+          )
+        )}
+        <button className='shadow fw-bold fs-5 w-100 btn btn-warning'>
+          Ir al checkout
+        </button>
+      </div>
+    );
+  } else {
+    return <h2>No tenes productos en tu carrito</h2>;
+  }
+};

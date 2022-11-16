@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+
 import logo from './../../assets/img/logo.png'
 
 export const Logo = ({ clases }) =>{
@@ -12,3 +13,4 @@ export const Logo = ({ clases }) =>{
             />
     )
 } 
+

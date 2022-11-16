@@ -4,8 +4,6 @@ const initialState = {
   nombre: '',
   email: '',
   texto: '',
-  nombre_empresa: '',
-  numero_orden: '',
 };
 
 export const Contacto = () => {
@@ -22,9 +20,11 @@ export const Contacto = () => {
   };
 
   return (
-    <aside className='d-flex'>
-      <div className='container col-9 mt-5 d-flex flex-column justify-content-center align-items-center'>
-        <h2 className='m-3'>Contacto</h2>
+    <>
+    <h2 className='titulo m-3'>Contacto</h2>
+    <div className='container'>
+      <div className='container col-9 d-flex flex-column justify-content-center align-items-center'>
+        
         <form
           name='formulario'
           className='col-6 text-start fw-bold p-4 bg-light rounded-5 border border-success border-3 mb-3'
@@ -68,7 +68,8 @@ export const Contacto = () => {
             </button>
           </section>
         </form>
-      </div>
-    </aside>
+       </div>
+    </div>
+    </>
   );
 };

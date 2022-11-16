@@ -1,5 +1,7 @@
-export const MainLayout = ({ children }) =>{
-    return (
-        <div>{ children }</div>
-    )
-}
+export const MainLayout = ({ children }) => {
+  return (
+    <>
+      <div>{children}</div>
+    </>
+  );
+};

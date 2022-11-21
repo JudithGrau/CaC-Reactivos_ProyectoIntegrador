@@ -1,6 +1,4 @@
 import React from "react"
-import { Redirect } from 'react-dom'
-//import '../Styles/Checkout.css'
 //import Swal from 'sweetalert2'
 
 export const Checkout = () =>{

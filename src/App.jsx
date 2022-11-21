@@ -22,7 +22,7 @@ function App() {
             <Router />
           </MainLayout>
 
-           <Footer/>
+          <Footer/>
         </CartProvider>
 
 

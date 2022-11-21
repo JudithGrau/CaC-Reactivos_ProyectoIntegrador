@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { CartContext } from "./CartContex"
+import { Link } from "react-router-dom" 
 import '../Styles/Cart.css' 
 
 export const Cart = () => {
@@ -44,9 +45,9 @@ export const Cart = () => {
                             </div>
                     )}
                 </div>
-                <div className="container">
-                    <button className="shadow fw-bold fs-5 w-100 btn btn-primary">Ir al checkout</button>
-                </div>
+                <Link to="/checkout" className="container text-decoration-none">
+                    <button className="shadow fw-bold fs-5 w-100 btn btn-warning">Terminar mi compra</button>
+                </Link>
         </>
         )
     }

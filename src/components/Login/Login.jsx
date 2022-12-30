@@ -1,63 +1,49 @@
-import { useState } from 'react';
-
-const initialState = {
-  email: '',
-  contrasenia: '',
-};
-
-export const Login = () => {
-  const [form, setForm] = useState(initialState);
-
-  const inputChangeHandle = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    console.log(form);
-  };
-
+export const Login = ({ handleInputChange, waiting, checkForm, googleSignIn, signup }) => {
   return (
-    <div>
-      <aside className='d-flex'>
-        <div className='container col-9 mt-5 d-flex flex-column justify-content-center align-items-center'>
-          <h2 className='m-3'>Login</h2>
-          <form
-            name='formulario'
-            className='col-6 text-start fw-bold p-4 bg-light rounded-5 border border-success border-3 mb-3'
-          >
-            <label>Dirección de Email: </label>
-            <input
-              name='email'
-              value={form.email}
-              type='email'
-              className='form-control my-3 rounded-4'
-              placeholder='Ingrese su email'
-              onChange={inputChangeHandle}
-            />
+      <form name='login'>
+          <h1 className="my-5">Login</h1>
+          <div className="form-floating mb-3">
+              <input
+                  name="name"
+                  type="text"
+                  className="form-control"
+                  id="floatingInput"
+                  onChange={ handleInputChange }
+              />
+              <label htmlFor="floatingInput">Usuario</label>
+          </div>
 
-            <label>Contraseña:</label>
-            <input
-              name='contrasenia'
-              value={form.contrasenia}
-              type='password'
-              className='form-control my-3 rounded-4'
-              placeholder='Ingrese su contraseña'
-              onChange={inputChangeHandle}
-            />
+          <div className="form-floating">
+              <input
+                  name="pass"
+                  type="password"
+                  className="form-control"
+                  id="floatingPassword"
+                  onChange={ handleInputChange }
+              />
+              <label htmlFor="floatingPassword">Password</label>
+          </div>
 
-            <section className='d-flex flex-row-reverse'>
+          <div className="container mt-4">
               <button
-                className='btn btn-success btn-md m-3 px-4 rounded-4'
-                onClick={handleClick}
-              >
-                Login
+                  disabled={ waiting }
+                  className='row w-100 btn btn-primary my-1'
+                  onClick={ checkForm }>
+                  Login
               </button>
-            </section>
-          </form>
-        </div>
-      </aside>
-    </div>
-  );
-};
+              <button
+              disabled={ waiting }
+              className='row w-100 btn btn-primary my-1'
+              onClick={ googleSignIn }
+          >
+              Login con cuenta Google
+          </button>
+      </div>
+      <button
+                className="btn link-secondary"
+                onClick={ signup }>
+                Registrarse
+            </button>
+            </form>
+    )
+  }

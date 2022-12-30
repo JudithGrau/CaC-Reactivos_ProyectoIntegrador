@@ -1,4 +1,5 @@
 
+import { LoginProvider } from './components/Login/LoginContext'
 import { CartProvider } from './components/Cart'
 import { MainLayout } from './components/layouts'
 import { MainMenu } from './components/NavBar'
@@ -14,7 +15,7 @@ function App() {
   return (
 
     <div className="App">
-
+      <LoginProvider>
         <CartProvider>
           <MainMenu />
           
@@ -24,7 +25,7 @@ function App() {
 
           <Footer/>
         </CartProvider>
-
+      </LoginProvider>
 
     </div>
   );

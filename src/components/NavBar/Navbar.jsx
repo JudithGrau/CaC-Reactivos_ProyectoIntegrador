@@ -1,4 +1,4 @@
-
+/* 
 import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../Cart"
@@ -72,3 +72,4 @@ export const Navbar = () => {
   );
 };
 
+ */

@@ -4,9 +4,9 @@ import { ItemListContainer } from "../Home/ItemList"
 import { Contacto } from "../Contacto/Contacto"
 import { Nosotros } from "../Nosotros/Nosotros"
 import { Cart } from "../Cart/Cart"
-import { LoginLayout } from "../layouts/LoginLayout"
-import { Register } from "../Register/Register"
-import { Login } from '../Login/Login';
+import { LoginLayout } from "../layouts"
+//import { Register } from "../Register/Register"
+//import { Login } from '../Login/Login';
 import { Checkout } from "../Checkout/Checkout"
 
 

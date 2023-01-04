@@ -1,5 +1,5 @@
 
-import { LoginProvider } from './components/Login/LoginContext'
+import { LoginProvider } from './components/Login'
 import { CartProvider } from './components/Cart'
 import { MainLayout } from './components/layouts'
 import { MainMenu } from './components/NavBar'
@@ -16,15 +16,15 @@ function App() {
 
     <div className="App">
       <LoginProvider>
+
         <CartProvider>
           <MainMenu />
-          
           <MainLayout>
             <Router />
           </MainLayout>
-
-          <Footer/>
+          {/* <Footer/> */}
         </CartProvider>
+
       </LoginProvider>
 
     </div>

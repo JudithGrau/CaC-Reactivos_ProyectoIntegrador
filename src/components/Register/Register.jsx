@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/* import { useState } from 'react';
 
 const initialState = {
   email: '',
@@ -72,3 +72,4 @@ export const Register = () => {
     </div>
   );
 };
+ */

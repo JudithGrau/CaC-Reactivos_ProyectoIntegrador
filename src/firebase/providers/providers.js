@@ -1,10 +1,19 @@
-import { GoogleAuthProvider } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { firebaseAuth } from "../";
 
 const googleProvider = new GoogleAuthProvider()
 
 export const signInWithGoogle = async (error) => {
-
+    try {
+        console.log("HOLAAAA")
+        const result = await signInWithPopup(firebaseAuth, googleProvider)
+        const {displayName, isAnonymous, photoURL, email, uid } = result.user;
+        return{displayName, isAnonymous,email, photoURL,uid}
+    }
+    catch (err) {
+        error()
+        console.log('Error de autenticación con google:', err)
+    }
 
 }
 

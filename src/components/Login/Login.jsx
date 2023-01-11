@@ -1,16 +1,26 @@
 import { useContext, useState } from "react";
+import { signInWithGoogle } from "../../firebase";
 import { LoginContext, Register } from "./"
 
 export const Login = () => {
 
-    const { login, waiting, wait, error, register, signup } = useContext(LoginContext);
+    const { firebaseLogin, waiting, wait, error, register, signup } = useContext(LoginContext);
 
     const [form, setForm] = useState({ name: '',pass: '' });
 
     function checkForm(e) {
-        e.preventDefault();
+        /* e.preventDefault();
         wait();
-        login(form.name, form.pass)
+        const user =  */
+        //login(form.name, form.pass)
+    }
+
+    async function googleSignIn(e){
+        e.preventDefault()
+        wait()
+        const user = await signInWithGoogle(error)
+        firebaseLogin(user)
+
     }
     
     function handleInputChange(e) {
@@ -59,7 +69,7 @@ export const Login = () => {
                 <button
                     disabled={ waiting }
                     className='row w-100 btn btn-primary my-1'
-                    //onClick={checkForm}
+                    onClick={googleSignIn}
                     >
                     Login cn cuenta Google
                 </button>

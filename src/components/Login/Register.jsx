@@ -51,13 +51,6 @@ export const Register = ({signup, waiting, firebaseLogin}) =>{
                     Registrarse
                 </button>
                 
-                <button
-                    disabled={ waiting }
-                    className='row w-100 btn btn-primary my-1'
-                    onClick={ signup }
-                    >
-                    Login cn cuenta Google
-                </button>
             </div>
 
             <button

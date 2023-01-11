@@ -1,4 +1,22 @@
-import {
+import { GoogleAuthProvider } from "firebase/auth";
+import { firebaseAuth } from "../";
+
+const googleProvider = new GoogleAuthProvider()
+
+export const signInWithGoogle = async (error) => {
+
+
+}
+
+
+
+
+
+
+
+
+
+/* import {
     createUserWithEmailAndPassword as register,
     signInWithEmailAndPassword as signin,
     signInWithPopup as popup,
@@ -39,4 +57,4 @@ export const commonLogin = async (name, pass, error) => {
         error()
         console.log('Error en el login:', err)
     }
-}
+} */

@@ -21,8 +21,8 @@ function App() {
           <MainMenu />
           <MainLayout>
             <Router />
+            <Footer/>
           </MainLayout>
-          {/* <Footer/> */}
         </CartProvider>
 
       </LoginProvider>

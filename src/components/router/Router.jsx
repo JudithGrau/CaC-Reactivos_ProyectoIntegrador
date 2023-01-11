@@ -18,12 +18,10 @@ export const Router = () =>{
                 <Route path='/nosotros' element={<Nosotros />} />
                 <Route path='/carrito' element={<Cart />} />
                 <Route path='/contacto' element={<Contacto />} />
-                {/* <Route path='/login' element={<Login />} />
-                <Route path='/register' element={<Register />} /> */}
                 <Route path='/item/:id' element={<ItemDetailContainer />} />
                 <Route path='/inicio' element={<ItemListContainer />} />
                 <Route path='/checkout' element={<Checkout />} />
-                <Route path='/*' element={<ItemListContainer />} />
+                <Route path='*' element={<ItemListContainer />} />
             </Routes>
         </LoginLayout>
 

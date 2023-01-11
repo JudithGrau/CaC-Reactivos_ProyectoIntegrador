@@ -10,11 +10,7 @@ export const LoginProvider = ({ children }) => {
     const[ waiting, setWaiting ]= useState(false)
     const[ register, setRegister ]= useState(false)
     
-    //const user = { name: 'admin', pass: 'admin' }
-
     function login(){
-        /* name === user.name && 
-        pass === user.pass &&  */
         setLogged(true)
     }
     function wait(){
@@ -30,6 +26,7 @@ export const LoginProvider = ({ children }) => {
             photoURL,
             email,
             uid } = await user;
+
         if(uid && !isAnonymous) {
             login()
             setUser({

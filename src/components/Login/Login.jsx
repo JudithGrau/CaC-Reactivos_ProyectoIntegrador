@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { signInWithGoogle } from "../../firebase";
+import { commonLogin, signInWithGoogle } from "../../firebase";
 import { LoginContext, Register } from "./"
 
 export const Login = () => {
@@ -9,10 +9,10 @@ export const Login = () => {
     const [form, setForm] = useState({ name: '',pass: '' });
 
     function checkForm(e) {
-        /* e.preventDefault();
+        e.preventDefault();
         wait();
-        const user =  */
-        //login(form.name, form.pass)
+        const user = commonLogin(form.name, form.pass, error)
+        firebaseLogin(user)
     }
 
     async function googleSignIn(e){
@@ -32,6 +32,7 @@ export const Login = () => {
     ? <Register
         signup={signup}
         waiting={waiting}
+        firebaseLogin={firebaseLogin}
         handleInputChange={handleInputChange}
     />
     : (

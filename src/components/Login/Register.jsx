@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { commonRegistration } from "../../firebase";
 
 export const Register = ({signup, waiting, firebaseLogin}) =>{
 
@@ -13,9 +14,10 @@ export const Register = ({signup, waiting, firebaseLogin}) =>{
     function checkForm(e) {
         e.preventDefault();
         const{name, pass} = form
-        
+        console.log("Holaa!");
         if(name!== '' && pass!== '') {
-
+            const user = commonRegistration(name,pass);
+            firebaseLogin(user)
         }
     }
 
@@ -32,13 +34,14 @@ export const Register = ({signup, waiting, firebaseLogin}) =>{
                 />
                 <label htmlFor="floatingInput">Email</label>
             </div>
+
             <div className="form-floating">
                 <input
                 name="pass"
                 type="password"
                 className="form-control"
                 id="floatingPassword"
-                onChange={handleInputChange}
+                onChange={ handleInputChange }
                 />
                 <label htmlFor="floatingPassword">Password</label>
             </div>
@@ -47,18 +50,16 @@ export const Register = ({signup, waiting, firebaseLogin}) =>{
                 <button
                     disabled={ waiting }
                     className='row w-100 btn btn-primary my-1'
-                    onClick={checkForm}>
-                    Registrarse
+                    onClick={ checkForm }>
+                    Registrar
                 </button>
-                
             </div>
 
             <button
                 className="btn link-secondary"
-                onClick={ signup}>
+                onClick={ signup }>
                 Loguearse
             </button>
-
         </form>
     )
 }

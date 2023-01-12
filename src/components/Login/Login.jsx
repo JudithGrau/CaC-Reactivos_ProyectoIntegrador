@@ -1,41 +1,5 @@
-import { useContext, useState } from "react";
-import { commonLogin, signInWithGoogle } from "../../firebase";
-import { LoginContext, Register } from "./"
-
-export const Login = () => {
-
-    const { firebaseLogin, waiting, wait, error, register, signup } = useContext(LoginContext);
-
-    const [form, setForm] = useState({ name: '',pass: '' });
-
-    function checkForm(e) {
-        e.preventDefault();
-        wait();
-        const user = commonLogin(form.name, form.pass, error)
-        firebaseLogin(user)
-    }
-
-    async function googleSignIn(e){
-        e.preventDefault()
-        wait()
-        const user = await signInWithGoogle(error)
-        firebaseLogin(user)
-
-    }
-    
-    function handleInputChange(e) {
-        const { name, value }= e.target
-        setForm({ ...form, [name]: value })
-    }
-
-    return register
-    ? <Register
-        signup={signup}
-        waiting={waiting}
-        firebaseLogin={firebaseLogin}
-        handleInputChange={handleInputChange}
-    />
-    : (
+export const Login = ({ handleInputChange, waiting, checkForm, googleSignIn, signup }) =>{
+    return (
         <form name= 'login'>
             <h1 className="my-5">Login</h1>
             <div className="form-floating mb-3">

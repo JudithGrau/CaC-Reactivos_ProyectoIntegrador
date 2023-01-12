@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { Login, LoginContext } from "../Login"
+import { LoginContainer, LoginContext } from "../Login"
 
 export const LoginLayout = ({ children }) => {
 
@@ -7,5 +7,5 @@ export const LoginLayout = ({ children }) => {
     console.log(logged);
     return logged
         ? children
-        : <Login />
+        : <LoginContainer />
 }

@@ -1,73 +1,97 @@
-import React from "react"
-//import Swal from 'sweetalert2'
+import React, { useState } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import '../Styles/Formulario.css' 
 
-export const Checkout = () =>{
-    const handleSubmit = (e) => {
-        e.preventDefault()
-
-        
-    }
-
+export const Checkout = () => {
+    const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
     return (
         <>
-            <h2 className='titulo m-3'>Checkout</h2>
-            <div className="container">
-                <div className='container col-9 d-flex flex-column justify-content-center align-items-center'>
-                    <form className="col-6 text-start fw-bold p-4 bg-light rounded-5 border border-success border-3 mb-3" onSubmit={handleSubmit}>
-                        <div className="name">
-                            <label className="">Nombre Completo </label>
-                            <input 
-                                name="nombre"
-                                //value={values.nombre}
-                                type="text"
-                                className="form-control my-3 rounded-4"
-                                placeholder='Ingrese su nombre'
-                                //onChange={handleInputChange}
-                                required
-                            />
-                        </div>
-                        <div className="email">
-                            <label className="">Email </label>
-                            <input 
-                                name="email"
-                                //value={values.email}
-                                type="email"
-                                className="form-control my-3 rounded-4"
-                                placeholder='Ingrese su email'
-                                //onChange={handleInputChange}
-                                required
-                            />
-                        </div>
-                        <div className="confirmEmail">
-                            <label className="label">Confima el Email </label>
-                            <input 
-                                name="confirmEmail"
-                                //value={values.confirmEmail}
-                                type="email"
-                                className="form-control my-3 rounded-4"
-                                placeholder='Confirme su email'
-                                //onChange={handleInputChange}
-                                required
-                            />
-                        </div>
-                        <div className="telefono">
-                            <label className="label">Teléfono </label>
-                            <input 
-                                name="tel"
-                                //value={values.tel}
-                                type="tel"
-                                className="form-control my-3 rounded-4"
-                                placeholder='Ingrese su telefono'
-                                //onChange={handleInputChange}
-                                required
-                            />
-                        </div>
-                        <section className="d-flex justify-content-center">
-                            <button className="btn btn-success btn-md m-3 px-4 rounded-4" type="submit">Submit</button>
-                        </section>
-                    </form>
-                </div>
-            </div>
+        <h2 className='titulo'>Checkout</h2>
+        <div className='container'>
+        <div className='container col-9 d-flex flex-column justify-content-center align-items-center'>
+            <Formik
+            initialValues={{
+                nombreCompleto: '',
+                correo: '',
+                telefono: ''
+            }} 
+            validate={(valores) => {
+                let errores = {};
+
+                // Validacion nombre
+                if(!valores.nombreCompleto){
+                errores.nombreCompleto = 'Por favor ingresa un nombre'
+                } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombreCompleto)){
+                errores.nombreCompleto = 'El nombre solo puede contener letras y espacios'
+                }
+
+                // Validacion correo
+                if(!valores.correo){
+                errores.correo = 'Por favor ingresa un correo electrónico'
+                } else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.correo)){
+                errores.correo = 'El correo solo puede contener letras, números, puntos, guiones y guión bajo.'
+                }
+
+                // Validacion telefono
+                if(!valores.telefono){
+                    errores.telefono = 'Por favor ingresa un teléfono'
+                    } else if(!/^\d{7,14}$/.test(valores.telefono)){
+                    errores.telefono = 'El teléfono solo puede contener números y el máximo son 14 dígitos.'
+                    }
+
+                return errores;
+            }}
+            onSubmit={(valores, {resetForm}) => {
+                resetForm();
+                console.log('Formulario enviado');
+                cambiarFormularioEnviado(true);
+                setTimeout(() => cambiarFormularioEnviado(false), 5000);
+            }}
+            >
+            {( {errors} ) => (
+                        <Form className="formulario col-10 text-start fw-bold p-4 bg-light rounded-5 border border-success border-3 mb-3">
+                            <div>
+                                <label htmlFor="nombreCompleto">Nombre completo</label>
+                                <Field
+                                    type="text" 
+                                    id="nombreCompleto" 
+                                    name="nombreCompleto" 
+                                    className="form-control my-3 rounded-4"
+                                    placeholder="Ingrese el nombre completo..."
+                                />
+                                <ErrorMessage name="nombreCompleto" component={() => (<div className="error">{errors.nombreCompleto}</div>)} />
+                            </div>
+                            <div>
+                                <label htmlFor="correo">Email</label>
+                                <Field
+                                    type="text" 
+                                    id="correo" 
+                                    name="correo"
+                                    className="form-control my-3 rounded-4" 
+                                    placeholder="Ingrese el email..." 
+                                />
+                                <ErrorMessage name="correo" component={() => (<div className="error">{errors.correo}</div>)} />
+                            </div>
+
+                            <div>
+                                <label htmlFor="telefono">Teléfono</label>
+                                <Field
+                                    type="text" 
+                                    id="telefono" 
+                                    name="telefono" 
+                                    className="form-control my-3 rounded-4"
+                                    placeholder="Ingrese el teléfono..."
+                                />
+                                <ErrorMessage name="telefono" component={() => (<div className="error">{errors.telefono}</div>)} />
+                            </div>
+
+                            <button type="submit">Enviar</button>
+                            {formularioEnviado && <p className="exito">Formulario enviado con éxito!</p>}
+                        </Form>
+                    )}
+            </Formik>
+        </div>
+        </div>
         </>
-    )
-}
+    );
+};

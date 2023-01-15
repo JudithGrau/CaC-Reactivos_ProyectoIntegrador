@@ -26,9 +26,9 @@ export const Contacto = () => {
 
             // Validacion correo
             if(!valores.correo){
-              errores.correo = 'Por favor ingresa un correo electronico'
+              errores.correo = 'Por favor ingresa un correo electrónico'
             } else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.correo)){
-              errores.correo = 'El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.'
+              errores.correo = 'El correo solo puede contener letras, números, puntos, guiones y guión bajo.'
             }
 
             return errores;
@@ -74,49 +74,9 @@ export const Contacto = () => {
 						</div>
 
 						<button type="submit">Enviar</button>
-						{formularioEnviado && <p className="exito">Formulario enviado con exito!</p>}
+						{formularioEnviado && <p className="exito">Formulario enviado con éxito!</p>}
 					</Form>
 				)}
-
-
-          {/* <label>Nombre:</label>
-          <input
-            name='nombre'
-            value={form.nombre}
-            type='text'
-            className='form-control my-3 rounded-4'
-            placeholder='Ingrese su nombre'
-            onChange={inputChangeHandle}
-          />
-
-          <label>Dirección de Email: </label>
-          <input
-            name='email'
-            value={form.email}
-            type='email'
-            className='form-control my-3 rounded-4'
-            placeholder='Ingrese su email'
-            onChange={inputChangeHandle}
-          />
-
-          <label>Mensaje:</label>
-          <textarea
-            name='texto'
-            value={form.texto}
-            className='form-control my-3 rounded-4'
-            placeholder='Ingrese su mensaje'
-            rows={5}
-            onChange={inputChangeHandle}
-          />
-
-          <section className='d-flex flex-row-reverse'>
-            <button
-              className='btn btn-success btn-md m-3 px-4 rounded-4'
-              onClick={handleClick}
-            >
-              Enviar
-            </button>
-          </section> */}
         </Formik>
       </div>
     </div>

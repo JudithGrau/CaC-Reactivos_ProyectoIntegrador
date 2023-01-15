@@ -9,16 +9,11 @@ export const Checkout = () =>{
     }
 
     return (
-        <div>
-            <h2>Checkout</h2>
-            <hr/>
-            
-        {
-            <div>
-                <aside className="d-flex">
-                    <div className="container col-9 d-flex flex-column justify-content-center align-items-center">
-                        <h2 className="m-2">Crear Orden</h2>
-                        <form className="col-6 text-start fw-bold p-4 bg-light rounded-5 border border-success border-3 mb-3" onSubmit={handleSubmit}>
+        <>
+            <h2 className='titulo m-3'>Checkout</h2>
+            <div className="container">
+                <div className='container col-9 d-flex flex-column justify-content-center align-items-center'>
+                <form className="col-6 text-start fw-bold p-4 bg-light rounded-5 border border-success border-3 mb-3" onSubmit={handleSubmit}>
                             <div className="name">
                                 <label className="">Nombre Completo </label>
                                 <input 
@@ -71,12 +66,8 @@ export const Checkout = () =>{
                                 <button className="btn btn-success btn-md m-3 px-4 rounded-4" type="submit">Submit</button>
                             </section>
                         </form>
-
-                    </div>
-                </aside>
-
+                </div>
             </div>
-        }
-        </div>
+        </>
     )
 }

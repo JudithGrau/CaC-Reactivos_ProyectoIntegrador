@@ -21,7 +21,7 @@ export const ItemDetail = ({ item }) => {
           <div className='image'>
             <img src={imagen} alt={nombre} />
           </div>
-          <div className='item'>
+          <div className='item' style={ { paddingLeft: '30px'}}>
             <div className='text-start'>
               <h2>{nombre}</h2>
               <span className='fw-bold'>Precio: </span> ARS$ {precio}

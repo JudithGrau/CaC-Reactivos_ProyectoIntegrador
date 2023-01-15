@@ -2,7 +2,7 @@ export const MainLayout = ({ children }) => {
     return (
         <div
             className="container d-flex align-items-center justify-content-center bg-light"
-            style={ { height: '100vh', zIndex: '-1' } }
+            style={ { height: '165vh', width: '100vw', marginTop: '20px', zIndex: '-1' } }
         >
             { children }
         </div>

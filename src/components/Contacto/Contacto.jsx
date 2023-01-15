@@ -68,7 +68,7 @@ export const Contacto = () => {
             </button>
           </section>
         </form>
-       </div>
+</div>
     </div>
     </>
   );

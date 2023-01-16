@@ -36,7 +36,7 @@ export const Login = ({ handleInputChange, waiting, checkForm, googleSignIn, sig
                     className='row w-100 btn btn-primary my-1'
                     onClick={googleSignIn}
                     >
-                    Login cn cuenta Google
+                    Login con cuenta Google
                 </button>
             </div>
             <button

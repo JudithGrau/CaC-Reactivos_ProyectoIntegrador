@@ -1,27 +1,24 @@
 import { useContext, useState } from "react"
 import { CartContext } from "./CartContex";
 import '../Styles/CartBox.css' 
+import { Link } from "react-router-dom";
 
 export const CartBox = ({ item }) => {
-  const [count, setCount] = useState(0);
-  const { addProducts } = useContext(CartContext);
+    const [count, setCount] = useState(0);
+    const { addProducts } = useContext(CartContext);
 
-  function add() {
-    setCount(count + 1);
-  }
+    function add() {
+        setCount(count + 1);
+    }
 
-  function remove() {
-    count > 0 && setCount(count - 1);
-  }
-
-  function reset() {
-    setCount(0);
-  }
-
+    function remove() {
+        count > 0 && setCount(count - 1);
+    }
 
     function reset() {
-        setCount(0)
+        setCount(0);
     }
+
 
     return (
         <>
@@ -74,13 +71,14 @@ export const CartBox = ({ item }) => {
                     <i className="bi bi-cart-plus"></i>
                     Agregar al carrito
                 </button>
-                
-                <button
-                    className="btn btn-secondary"
-                >
-                    <i className="bi bi-cart-check"></i>
-                    Comprar
-                </button>
+                <Link to="/carrito">
+                    <button
+                        className="btn btn-secondary"
+                    >
+                        <i className="bi bi-cart-check"></i>
+                        Comprar
+                    </button>
+                </Link>
             </div>
         </>
     )

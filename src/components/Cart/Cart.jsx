@@ -48,10 +48,22 @@ export const Cart = () => {
                 <Link to="/checkout" className="container text-decoration-none">
                     <button className="shadow fw-bold fs-5 w-100 btn btn-warning">Terminar mi compra</button>
                 </Link>
+                <Link to={`/`} className="btn btn-secondary m-5">Seguir comprando</Link>
         </>
         )
     }
     else {
-        return (<h2>No tienes productos en tu carrito</h2>)
+        return (
+            <div className="">
+                <h3>El carrito está vacío, agrega algo!</h3>
+                <Link to={`/`}>
+                    <button
+                        className="btn btn-success"
+                    >
+                        Agrega algo al carrito
+                    </button>
+                </Link>
+            </div>
+        )
     }
 }

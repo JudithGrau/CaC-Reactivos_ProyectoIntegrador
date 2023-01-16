@@ -41,7 +41,7 @@ export const Contacto = () => {
           }}
         >
           {( {errors} ) => (
-					<Form className="formulario col-10 text-start fw-bold p-4 bg-light rounded-5 border border-success border-3 mb-3">
+					<Form className="formulario col-9 text-start fw-bold p-4 bg-light rounded-5 border border-success border-3 mb-3">
 						<div>
 							<label htmlFor="nombre">Nombre</label>
 							<Field

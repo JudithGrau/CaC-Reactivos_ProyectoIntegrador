@@ -5,7 +5,7 @@ export const LoginContext = createContext()
 
 export const LoginProvider = ({ children }) => {
 
-    const [logged, setLogged] = useState(true)
+    const [logged, setLogged] = useState(false)
     const [user, setUser] = useState(undefined)
     const[ waiting, setWaiting ]= useState(false)
     const[ register, setRegister ]= useState(false)
